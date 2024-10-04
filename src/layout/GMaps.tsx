@@ -96,7 +96,7 @@ const MapComponent: React.FC = () => {
 
   // Remove the useCallback to prevent unnecessary re-creations
   const fetchData = async () => {
-    const response = await fetch(import.meta.env.VITE_PHP_SERVER+`/php-api/search-barcode-loc.php?id=${productID}`);
+    const response = await fetch(import.meta.env.VITE_PHP_SERVER+`/search-barcode-loc.php?id=${productID}`);
     const data: Poi[] = await response.json();
 
     const filteredData = data.filter(poi => {
